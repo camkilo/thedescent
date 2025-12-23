@@ -1,0 +1,23 @@
+{
+  "name": "thedescent",
+  "version": "1.0.0",
+  "description": "Build a third-person 3D vertical descent game. Player is constantly falling through a ruined stone tower, landing briefly on platforms that break after use. Player can move mid-air, dash sideways, wall-kick, and perform light attacks. Small enemies guard platforms. Camera follows smoothly from above. Cinematic lighting, fog, falling debris.",
+  "main": "game.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}
