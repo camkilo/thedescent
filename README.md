@@ -81,6 +81,51 @@ This creates an optimized build in the `dist/` directory.
 npm run preview
 ```
 
+## Deployment
+
+This game is ready to deploy on various platforms:
+
+### Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/camkilo/thedescent)
+
+**Manual Deployment:**
+1. Install Vercel CLI: `npm install -g vercel`
+2. Run: `vercel`
+3. Follow the prompts
+
+The game will automatically build and deploy. Vercel configuration is included in `vercel.json`.
+
+### Deploy to Render
+
+1. Go to [Render Dashboard](https://dashboard.render.com/)
+2. Click "New" → "Static Site"
+3. Connect your GitHub repository
+4. Render will automatically detect the `render.yaml` configuration
+5. Click "Create Static Site"
+
+**Configuration:**
+- **Build Command**: `npm install && npm run build`
+- **Publish Directory**: `dist`
+
+### Deploy to Netlify
+
+1. Go to [Netlify](https://app.netlify.com/)
+2. Drag and drop the `dist` folder (after running `npm run build`)
+3. Or connect your Git repository for continuous deployment
+
+**Build Settings:**
+- **Build Command**: `npm run build`
+- **Publish Directory**: `dist`
+
+### Other Static Hosting
+
+After running `npm run build`, the `dist/` folder contains all the files needed. You can deploy this folder to:
+- GitHub Pages
+- Cloudflare Pages
+- AWS S3 + CloudFront
+- Any static file hosting service
+
 ## Technical Details
 
 ### Built With
@@ -108,6 +153,9 @@ thedescent/
 ├── style.css           # Game UI styling
 ├── game.js             # Main game logic and Three.js scene
 ├── package.json        # Project dependencies
+├── vercel.json         # Vercel deployment configuration
+├── render.yaml         # Render deployment configuration
+├── .gitignore          # Git ignore rules
 └── README.md          # This file
 ```
 
